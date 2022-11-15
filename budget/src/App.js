@@ -9,6 +9,9 @@ import {AppProvider} from './AppContext';
 import "./global.css"
 
 const App = () => {
+
+	
+	
 	return (
 		<AppProvider>
 			<div className='container'>
