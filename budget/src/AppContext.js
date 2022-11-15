@@ -31,6 +31,8 @@ const initialState = {
     ]
 }
 
+//filter => new array for updated state to show new budget
+
 export const AppContext = createContext();
 
 export const AppProvider = (props) => {

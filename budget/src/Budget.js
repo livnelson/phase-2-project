@@ -12,3 +12,5 @@ const Budget = () => {
 }
 
 export default Budget;
+
+//display initial state and make it editable
