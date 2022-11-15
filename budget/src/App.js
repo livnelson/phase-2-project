@@ -8,6 +8,9 @@ import AddExpenseForm from './AddExpenseForm'
 import { AppProvider } from './AppContext';
 
 const App = () => {
+
+	
+	
 	return (
 		<AppProvider>
 			<div className='container'>
