@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 const AddExpenseForm = () => {
 	const { dispatch } = useContext(AppContext);
 
+
 	const [name, setName] = useState('');
 	const [cost, setCost] = useState('');
 
