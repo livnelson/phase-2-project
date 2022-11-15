@@ -1,0 +1,63 @@
+/* body {
+    background-color: #093620;
+} */
+
+ 
+.expense-btn {
+    /* width: 100%; */
+    background: #2e8d5b;
+    height: 30px;
+    margin-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.expense-btn:hover {
+    background: #00503c;
+    height: 30px;
+    margin-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#name-input {
+    margin-top: 5px;
+    padding: 3px;
+    padding-left: 5px;
+    cursor: pointer;
+    border: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+}
+
+.form-control:active {
+    margin-top: 5px;
+    padding: 3px;
+    padding-left: 5px;
+    cursor: pointer;
+    border: 2px;
+    border-color: #2e8d5b
+}
+
+#cost-input {
+    margin-top: 1px;
+    padding: 3px;
+    padding-left: 5px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 3px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+}

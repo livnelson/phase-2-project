@@ -5,19 +5,20 @@ import Remaining from './Remaining';
 import ExpenseTotal from './ExpenseTotal';
 import ExpenseList from './ExpenseList';
 import AddExpenseForm from './AddExpenseForm'
+import "./global.css"
 
 const App = () => {
 	return (
 		<div className='container'>
 			<h1 className='mt-3'>My Budget Planner</h1>
 			<div className='row mt-3'>
-				<div className='col-sm'>
+				<div id="budget-col" className='col-sm'>
 					<Budget />
 				</div>
-				<div className='col-sm'>
+				<div id="remaining-col"className='col-sm'>
 					<Remaining />
 				</div>
-				<div className='col-sm'>
+				<div id="expense-col"className='col-sm'>
 					<ExpenseTotal />
 				</div>
 			</div>
