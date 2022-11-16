@@ -1,5 +1,7 @@
 import React from 'react'
 import ExpenseList from './ExpenseList';
+import AddExpenseForm from './AddExpenseForm'
+
 
 function Expenses() {
 
@@ -9,6 +11,11 @@ function Expenses() {
         <div className='row mt-3'>
             <div className='col-sm'>
                 <ExpenseList />
+            </div>
+            <div className='row mt-3'>
+                <div className='col-sm'>
+                    <AddExpenseForm />
+                </div>
             </div>
         </div>
     </div>
