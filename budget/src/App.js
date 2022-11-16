@@ -8,12 +8,14 @@ import AddExpenseForm from './AddExpenseForm'
 import { AppProvider } from "./AppContext.js"
 
 import "./global.css"
+import Header from "./Header"
 
 const App = () => {
 	return (
 		<AppProvider>
 		<div className='container'>
-			<h1 className='mt-3'>My Budget Planner</h1>
+			<Header />
+			
 			<div className='row mt-3'>
 				<div id="budget-col" className='col-sm'>
 					<Budget />
@@ -31,7 +33,7 @@ const App = () => {
 						<ExpenseList />
 					</div>
 				</div>
-				<h3 className='mt-3'>Add Expense</h3>
+				<br />
 				<div className='row mt-3'>
 					<div className='col-sm'>
 						<AddExpenseForm />
