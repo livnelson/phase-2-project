@@ -29,7 +29,7 @@ const AddExpenseForm = ({ handleEdit }) => {
 
 	return (
 		<form id="expense-form" onSubmit={onSubmit}>
-            <h3 className='mt-3'>Add Expense</h3>
+            {/* <h5 className='mt-3'>Add Expense</h5> */}
 			<div className='row'>
 				<div className='col-sm'>
 					{/* <label for='name'></label> */}

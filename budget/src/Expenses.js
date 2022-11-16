@@ -12,11 +12,6 @@ function Expenses() {
             <div className='col-sm'>
                 <ExpenseList />
             </div>
-            <div className='row mt-3'>
-                <div className='col-sm'>
-                    <AddExpenseForm />
-                </div>
-            </div>
         </div>
     </div>
   )
