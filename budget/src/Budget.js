@@ -1,26 +1,40 @@
-import React, {useContext, Component} from 'react';
+import React, { useContext } from 'react';
 import { AppContext } from './AppContext';
-import { TiEdit } from 'react-icons/ti'
-
-
-
-
 
 
 const Budget = () => {
     
-    const {budget} = useContext(AppContext)
+    const { budget } = useContext(AppContext)
+
+    // const [Value, setValue] = useState("");
+    // const [EditMode, setEditMode] = useState(false);
     
+	// const toggleEditMode = () => setEditMode(!EditMode);
+    
+	// const editBudget = () => {
+    //     console.log('hi')
+    //     return EditMode ? (
+    //     <div>
+    //         <input
+    //         type="number"
+    //         value={Value}
+    //         onChange={(e) => setValue(e.target.value)}
+    //         onBlur={toggleEditMode}
+    //         />
+    //     </div>
+    //     ) : ( 
+    //         (console.log('test'))
+    //     //  <span onClick={toggleEditMode}>{Value}</span>
+    //      );
+    //     }
     
     return (
         <div  className='alert alert-secondary'>
             <span>Budget: ${budget}</span>
-            <TiEdit size='1.2em' style={{ margin: 5 }}></TiEdit>
+            {/* <TiEdit size='1.2em' style={{ margin: 5 }} onClick={editBudget}></TiEdit> */}
         </div>
         
     )
 }
 
 export default Budget;
-
-//display initial state and make it editable

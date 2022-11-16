@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Budget from './Budget';
 import Remaining from './Remaining';
@@ -11,6 +11,14 @@ import "./global.css"
 import Menu from "./Menu"
 
 const App = () => {
+
+	function handleEdit(expenses) {
+        const updatedExpenses = expenses.filter((expense) => 
+            expense.id === expenses.id ? updatedExpenses : expense
+        )
+       console.log("testing edit")
+    }
+
 	return (
 		<AppProvider>
 		<Menu />
@@ -29,13 +37,13 @@ const App = () => {
 				<h3 className='mt-3'>Expenses</h3>
 				<div className='row mt-3'>
 					<div className='col-sm'>
-						<ExpenseList />
+						<ExpenseList handleEdit={handleEdit}/>
 					</div>
 				</div>
 				<br />
 				<div className='row mt-3'>
 					<div className='col-sm'>
-						<AddExpenseForm />
+						<AddExpenseForm handleEdit={handleEdit}/>
 					</div>
 				</div>
 			</div>
