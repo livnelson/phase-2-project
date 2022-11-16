@@ -6,13 +6,17 @@ import Budget from './Budget'
 
 function CreateBudget({monthlyBudget, setMonthlyBudget}) {
   
+
+
   return (
     <div className="container">
        <div className='row mt-3'>
                 <div className='col-sm'>
+
                     <BudgetForm monthlyBudget={monthlyBudget} setMonthlyBudget={setMonthlyBudget}/>
                     <AddExpenseForm />
                     
+                 
                 </div>
             </div>
     </div>

@@ -14,6 +14,9 @@ const budgetForm = ({monthlyBudget, setMonthlyBudget}) => {
                 <input type="number" style={{ margin: 5 }} required value={monthlyBudget} />
               </label>
               <input onSubmit={handleChange} type="submit" value="Submit" />
+
+                
+
             </form>
        </div>
     )
