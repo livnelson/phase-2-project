@@ -1,14 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
 import AddExpenseForm from './AddExpenseForm'
 import BudgetForm from './BudgetForm'
+import Remaining from './Remaining'
+import Budget from './Budget'
 
-function CreateBudget() {
+function CreateBudget({monthlyBudget, setMonthlyBudget}) {
+  
+
+
   return (
     <div className="container">
        <div className='row mt-3'>
                 <div className='col-sm'>
-                    <BudgetForm />
+
+                    <BudgetForm monthlyBudget={monthlyBudget} setMonthlyBudget={setMonthlyBudget}/>
                     <AddExpenseForm />
+                    
+                 
                 </div>
             </div>
     </div>

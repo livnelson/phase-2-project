@@ -3,7 +3,7 @@ import React from 'react'
 const budgetForm = ({monthlyBudget, setMonthlyBudget}) => {
 
     const handleChange = (e) => {
-        console.log(e.target.value)
+        console.log('hi', e.target.value)
         setMonthlyBudget(e.target.value)
     }
     return (
@@ -11,9 +11,12 @@ const budgetForm = ({monthlyBudget, setMonthlyBudget}) => {
             <form>
               <label>
                 Add Montly Income: $ 
-                <input type="number" style={{ margin: 5 }} required onChange={handleChange} value={monthlyBudget} />
+                <input type="number" style={{ margin: 5 }} required value={monthlyBudget} />
               </label>
-              <input type="submit" value="Submit" />
+              <input onSubmit={handleChange} type="submit" value="Submit" />
+
+                
+
             </form>
        </div>
     )
