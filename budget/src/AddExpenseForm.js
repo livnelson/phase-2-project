@@ -56,8 +56,7 @@ const AddExpenseForm = () => {
                 <br />
 				<div className='col-sm'>
 					<button type='submit' className='btn btn-primary mt-3'>
-					{/* <button type='submit' className='expense-btn'> */}
-						Save Expense
+					   Save Expense
 					</button>
 				</div>
 			</div>
