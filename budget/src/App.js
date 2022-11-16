@@ -1,54 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Budget from './Budget';
-import Remaining from './Remaining';
-import ExpenseTotal from './ExpenseTotal';
-import ExpenseList from './ExpenseList';
-import AddExpenseForm from './AddExpenseForm'
+import Home from "./Home"
+import Expenses from './Expenses';
+import AddExpense from './AddExpense';
 import { AppProvider } from "./AppContext.js"
+import { Switch, Route } from "react-router-dom"
 
 import "./global.css"
 import Menu from "./Menu"
 
 const App = () => {
 
-	function handleEdit(expenses) {
-        const updatedExpenses = expenses.filter((expense) => 
-            expense.id === expenses.id ? updatedExpenses : expense
-        )
-       console.log("testing edit")
-    }
-
 	return (
+	  <div>
 		<AppProvider>
 		<Menu />
-		<div className='container'>
-			<div className='row mt-3'>
-				<div id="budget-col" className='col-sm'>
-					<Budget />
-				</div>
-				<div id="remaining-col"className='col-sm'>
-					<Remaining />
-				</div>
-				<div id="expense-col"className='col-sm'>
-					<ExpenseTotal />
-					</div>
-				</div>
-				<h3 className='mt-3'>Expenses</h3>
-				<div className='row mt-3'>
-					<div className='col-sm'>
-						<ExpenseList handleEdit={handleEdit}/>
-					</div>
-				</div>
-				<br />
-				<div className='row mt-3'>
-					<div className='col-sm'>
-						<AddExpenseForm handleEdit={handleEdit}/>
-					</div>
-				</div>
-			</div>
+		<Switch>
+			<Route path="/Expenses">
+				<Expenses />
+			</Route>
+			<Route path="/AddExpense">
+				<AddExpense />
+			</Route>
+			<Route  path="/">
+				<Home />
+			</Route>
+		</Switch>
 		</AppProvider>
+	  </div>
 	);
+
 };
 
 export default App;
