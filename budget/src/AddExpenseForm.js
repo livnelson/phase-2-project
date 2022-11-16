@@ -26,7 +26,7 @@ const AddExpenseForm = ({ handleEdit }) => {
 		});
 	};
 
-	
+
 	return (
 		<form id="expense-form" onSubmit={onSubmit}>
             <h3 className='mt-3'>Add Expense</h3>
@@ -43,6 +43,7 @@ const AddExpenseForm = ({ handleEdit }) => {
 						onChange={(event) => setName(event.target.value)}
 					></input>
 				</div>
+				<br />
 				<div className='col-sm'>
 					{/* <label for='cost'></label> */}
 					<input

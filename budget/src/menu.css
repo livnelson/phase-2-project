@@ -4,12 +4,15 @@
     background-color: #24925a;
     padding-top: 20px;
     padding-bottom: 10px;
-    padding-left: 30px;
     color: #ffffff;
     text-align: center;
+    margin: auto;
+    align-content: center;
+    justify-items: center !important;
 }
 
 button {
+    width: 150px;
     color: white;
     background: #2bb671;
     padding-left: 25px;
