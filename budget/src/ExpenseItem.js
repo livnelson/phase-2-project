@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { TiDelete, TiEdit } from 'react-icons/ti';
 import { AppContext } from './AppContext';
 
-const ExpenseItem = (props) => {
+const ExpenseItem = (props, {handleEdit}) => {
 	const { dispatch } = useContext(AppContext);
 
 	const handleDeleteExpense = () => {
@@ -12,6 +12,7 @@ const ExpenseItem = (props) => {
 		});
 	};
 
+
 	return (
 		<li className='list-group-item d-flex justify-content-between align-items-center'>
 			{props.name} 
@@ -19,7 +20,7 @@ const ExpenseItem = (props) => {
 				<span style={{ padding: 20 }} >
 					${props.cost}
 				</span>
-				<TiEdit size='1.5em'></TiEdit>
+				<TiEdit size='1.5em' onClick={handleEdit}></TiEdit>
 				<TiDelete size='1.5em' onClick={handleDeleteExpense}></TiDelete>
 			</div>
 		</li>

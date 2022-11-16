@@ -3,12 +3,13 @@ import { AppContext } from './AppContext';
 import { v4 as uuidv4 } from 'uuid';
 import "./form.css"
 
-const AddExpenseForm = () => {
+const AddExpenseForm = ({ handleEdit }) => {
 	const { dispatch } = useContext(AppContext);
 
 
 	const [name, setName] = useState('');
 	const [cost, setCost] = useState('');
+
 
 	const onSubmit = (event) => {
 		event.preventDefault();

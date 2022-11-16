@@ -26,7 +26,7 @@ body {
 
 .alert-secondary{
     color: #ffffff;
-    background: #b667d1;
+    /* background: #b667d1; */
     background: #0c9be5;
     border: 0;
     border-radius: 4px;
@@ -35,7 +35,7 @@ body {
 
 .alert-success{
     color: #ffffff;
-    background: #ff5b4d;
+    /* background: #ff5b4d; */
     background: #b667d1;
     border: 0;
     border-radius: 4px;
@@ -44,7 +44,7 @@ body {
 
 .alert-primary{
     color: #ffffff;
-    background: #0c9be5;
+    /* background: #0c9be5; */
     background: #fd9c00;
     border: 0;
     border-radius: 4px;

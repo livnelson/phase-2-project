@@ -2,14 +2,22 @@ import React, {useContext} from 'react';
 import ExpenseItem from './ExpenseItem'
 import { AppContext } from './AppContext';
 
-const ExpenseList = () => {
+const ExpenseList = ({ handleEdit }) => {
     const {expenses} = useContext(AppContext)
-    
+
+    const mappedExpenses = expenses.map((expense) => (
+        <ExpenseItem 
+            key={expense.id} 
+            id={expense.id}
+            name={expense.name} 
+            cost={expense.cost}
+            handleEdit={handleEdit}
+        />
+    ))
+
     return (
         <ul className='list-group'>
-            {expenses.map((expense) => (
-                <ExpenseItem id={expense.id} key={expense.id} name={expense.name} cost={expense.cost} />
-            ))}
+            {mappedExpenses}
         </ul>
     )
 }
