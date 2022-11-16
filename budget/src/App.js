@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "./Home"
 import Expenses from './Expenses';
-import AddExpense from './AddExpense';
+import CreateBudget from './CreateBudget';
 import { AppProvider } from "./AppContext.js"
 import { Switch, Route } from "react-router-dom"
 import BudgetForm from './BudgetForm'
@@ -21,8 +21,8 @@ const App = () => {
 			<Route path="/Expenses">
 				<Expenses />
 			</Route>
-			<Route path="/AddExpense">
-				<AddExpense />
+			<Route path="/CreateBudget">
+				<CreateBudget />
 			</Route>
 			<Route  path="/">
 				<Home />

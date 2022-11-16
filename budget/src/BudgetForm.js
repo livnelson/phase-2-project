@@ -7,16 +7,15 @@ const budgetForm = ({monthlyBudget, setMonthlyBudget}) => {
         setMonthlyBudget(e.target.value)
     }
     return (
-        <div className="budget-form">
-            <h2>Add Montly Income</h2>
+        <div id="budget-form" className="budget-form">
             <form>
-                <label>$</label>
-                <input type="number" required onChange={handleChange} value={monthlyBudget}></input>
+              <label>
+                Add Montly Income: $ 
+                <input type="number" style={{ margin: 5 }} required onChange={handleChange} value={monthlyBudget} />
+              </label>
+              <input type="submit" value="Submit" />
             </form>
-            <p>
-                The My Budget Planner application is meant to help the user create a monthly budget plan by entering in their individual expenses 
-            </p>
-        </div>
+       </div>
     )
 }
 
