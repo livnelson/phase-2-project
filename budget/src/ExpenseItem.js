@@ -20,7 +20,7 @@ const ExpenseItem = (props, {handleEdit}) => {
 				<span style={{ padding: 20 }} >
 					${props.cost}
 				</span>
-				<TiEdit size='1.5em' onClick={handleEdit}></TiEdit>
+				{/* <TiEdit size='1.5em' onClick={handleEdit}></TiEdit> */}
 				<TiDelete size='1.5em' onClick={handleDeleteExpense}></TiDelete>
 			</div>
 		</li>
