@@ -14,10 +14,8 @@ const Budget = () => {
     
     return (
         <div  className='alert alert-secondary'>
-            <span>Budget: $10,000</span>
-            <spacer> </spacer>
-            
-            <TiEdit size='1.2em'></TiEdit>
+            <span>Budget: ${budget}</span>
+            <TiEdit size='1.2em' style={{ margin: 5 }}></TiEdit>
         </div>
         
     )
