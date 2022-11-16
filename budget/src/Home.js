@@ -2,10 +2,10 @@ import React, {useState} from 'react'
 import Budget from './Budget';
 import Remaining from './Remaining';
 import ExpenseTotal from './ExpenseTotal';
-import BudgetForm from './BudgetForm';
+import CreateBudget from './CreateBudget';
 
-function Home() {
-  const [monthlyBudget, setMonthlyBudget] = useState("")  
+function Home({monthlyBudget, setMonthlyBudget}) {
+    
 
   return (
     <div className='container'>
@@ -16,13 +16,13 @@ function Home() {
                 <h3>Your Budget At A Glance</h3>
                 <div className='row mt-3'>
                     <div id="budget-col" className='col-sm'>
-                        <Budget monthlyBudget={monthlyBudget} />
+                        <Budget monthlyBudget={monthlyBudget} setMonthlyBudget={setMonthlyBudget}/>
                     </div>
                     <div id="expense-col"className='col-sm'>
                         <ExpenseTotal />
                     </div>
                     <div id="remaining-col"className='col-sm'>
-                        <Remaining monthlyBudget={monthlyBudget}/>
+                        <Remaining monthlyBudget={monthlyBudget} setMonthlyBudget={setMonthlyBudget}/>
                     </div>
                 </div>
             </div>

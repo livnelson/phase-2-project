@@ -12,15 +12,16 @@ import Menu from "./Menu"
 
 const App = () => {
 
-	const [income, setIncome] = useState([])
+	const [monthlyBudget, setMonthlyBudget] = useState("10000")
+	// const [income, setIncome] = useState([])
 
-	useEffect(() => { 
-		fetch('http://localhost:8000/expenses')
-		.then((res) => res.json())
-		.then(budgetData => {
-			console.log(budgetData)
-		})
-	},[])
+	// useEffect(() => { 
+	// 	fetch('http://localhost:8000/expenses')
+	// 	.then((res) => res.json())
+	// 	.then(budgetData => {
+	// 		console.log(budgetData)
+	// 	})
+	// },[])
 
 	return (
 	  <div>
@@ -34,7 +35,7 @@ const App = () => {
 				<CreateBudget />
 			</Route>
 			<Route  path="/">
-				<Home />
+				<Home monthlyBudget={monthlyBudget} setMonthlyBudget={setMonthlyBudget}/>
 			</Route>
 		</Switch>
 		</AppProvider>
