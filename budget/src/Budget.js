@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { AppContext } from './AppContext';
 
 
-const Budget = () => {
+const Budget = ({monthlyBudget}) => {
     
     const { budget } = useContext(AppContext)
 
@@ -30,7 +30,7 @@ const Budget = () => {
     
     return (
         <div  className='alert alert-secondary'>
-            <span>Budget: ${budget}</span>
+            <span>Budget: ${monthlyBudget}</span>
             {/* <TiEdit size='1.2em' style={{ margin: 5 }} onClick={editBudget}></TiEdit> */}
         </div>
         
