@@ -1,5 +1,5 @@
-{"budget":
-    [{ "expenses": [
+{ 
+"expenses": [
         {
             "id":1,
             "name": "shopping",
@@ -31,13 +31,13 @@
             "cost": 60
         }
         
-    ], 
+    ],
 
-        "income":
+"income":
         [{
             "id": 1,
             "money" : 10000
         }]
-
-    }]
 }
+
+
