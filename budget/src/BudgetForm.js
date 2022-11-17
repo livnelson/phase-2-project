@@ -1,6 +1,6 @@
 import React from 'react'
 
-const budgetForm = ({monthlyBudget, setMonthlyBudget}) => {
+const BudgetForm = ({monthlyBudget, setMonthlyBudget}) => {
 
     const handleChange = (e) => {
         console.log('hi', e.target.value)
@@ -19,4 +19,4 @@ const budgetForm = ({monthlyBudget, setMonthlyBudget}) => {
     )
 }
 
-export default budgetForm
+export default BudgetForm
