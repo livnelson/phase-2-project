@@ -6,28 +6,6 @@ const Budget = ({monthlyBudget}) => {
     
     const { budget } = useContext(AppContext)
 
-    // const [Value, setValue] = useState("");
-    // const [EditMode, setEditMode] = useState(false);
-    
-	// const toggleEditMode = () => setEditMode(!EditMode);
-    
-	// const editBudget = () => {
-    //     console.log('hi')
-    //     return EditMode ? (
-    //     <div>
-    //         <input
-    //         type="number"
-    //         value={Value}
-    //         onChange={(e) => setValue(e.target.value)}
-    //         onBlur={toggleEditMode}
-    //         />
-    //     </div>
-    //     ) : ( 
-    //         (console.log('test'))
-    //     //  <span onClick={toggleEditMode}>{Value}</span>
-    //      );
-    //     }
-    
     return (
         <div  className='alert alert-secondary'>
             <span>Budget: ${monthlyBudget}</span>

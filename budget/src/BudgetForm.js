@@ -7,18 +7,15 @@ const budgetForm = ({monthlyBudget, setMonthlyBudget}) => {
         setMonthlyBudget(e.target.value)
     }
     return (
-        <div id="budget-form" className="budget-form">
-            <form>
-              <label>
-                Add Montly Income: $ 
-                <input type="number" style={{ margin: 5 }} required value={monthlyBudget} />
-              </label>
-              <input onSubmit={handleChange} type="submit" value="Submit" />
-
-                
-
-            </form>
-       </div>
+      <div id="budget-form" className="budget-form">
+        <label>
+          <h5>Add Montly Income: $ </h5>
+        </label>
+        <form>
+          <input type="number" style={{ margin: 5 }} required value={monthlyBudget} />
+          <input onSubmit={handleChange} type="submit" value="Submit" />
+        </form>
+      </div>
     )
 }
 
