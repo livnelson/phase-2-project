@@ -12,16 +12,6 @@ import Menu from "./Menu"
 const App = () => {
 
 	const [monthlyBudget, setMonthlyBudget] = useState("10000")
-	const [money, setMoney] = useState([])
-
-	useEffect(() => { 
-		fetch('http://localhost:8000/budget')
-		.then((res) => res.json())
-		.then(budgetData => {
-			console.log(budgetData)
-			setMoney(budgetData)
-		})
-	},[])
 
 	return (
 	  <div>

@@ -1,9 +1,15 @@
-import React, {useContext} from 'react';
+import React, {useState, useEffect} from 'react';
 import ExpenseItem from './ExpenseItem'
 import { AppContext } from './AppContext';
 
-const ExpenseList = ({ handleEdit }) => {
-    const {expenses} = useContext(AppContext)
+const ExpenseList = () => {
+    // const {expenses} = useContext(AppContext)
+
+    const [expenses, setExpenses] = useState([])
+	const expensesArray = useEffect(() =>
+    {fetch('http://localhost:8000/expenses')
+			.then((res) => res.json())
+			.then(expensesData => setExpenses(expensesData))}, [])
 
     const mappedExpenses = expenses.map((expense) => (
         <ExpenseItem 
@@ -11,7 +17,6 @@ const ExpenseList = ({ handleEdit }) => {
             id={expense.id}
             name={expense.name} 
             cost={expense.cost}
-            handleEdit={handleEdit}
         />
     ))
 
