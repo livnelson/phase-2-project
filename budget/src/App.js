@@ -1,66 +1,37 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Budget from './Budget';
-import Remaining from './Remaining';
-import ExpenseTotal from './ExpenseTotal';
-import ExpenseList from './ExpenseList';
-import AddExpenseForm from './AddExpenseForm'
-<<<<<<< HEAD
-import {AppProvider} from './AppContext';
-=======
+import Home from "./Home"
+import Expenses from './Expenses';
+import CreateBudget from './CreateBudget';
 import { AppProvider } from "./AppContext.js"
+import { Switch, Route } from "react-router-dom"
 
->>>>>>> 66f7177 (fix bugs)
 import "./global.css"
+import Menu from "./Menu"
 
 const App = () => {
 
-	
-	
+	const [monthlyBudget, setMonthlyBudget] = useState("10000")
+
 	return (
+	  <div>
 		<AppProvider>
-<<<<<<< HEAD
-			<div className='container'>
-				<h1 className='mt-3'>My Budget Planner</h1>
-				<div className='row mt-3'>
-					<div id="budget-col" className='col-sm'>
-						<Budget />
-					</div>
-					<div id="remaining-col" className='col-sm'>
-						<Remaining />
-					</div>
-					<div id="expense-col" className='col-sm'>
-						<ExpenseTotal />
-=======
-		<div className='container'>
-			<h1 className='mt-3'>My Budget Planner</h1>
-			<div className='row mt-3'>
-				<div id="budget-col" className='col-sm'>
-					<Budget />
-				</div>
-				<div id="remaining-col"className='col-sm'>
-					<Remaining />
-				</div>
-				<div id="expense-col"className='col-sm'>
-					<ExpenseTotal />
->>>>>>> 66f7177 (fix bugs)
-					</div>
-				</div>
-				<h3 className='mt-3'>Expenses</h3>
-				<div className='row mt-3'>
-					<div className='col-sm'>
-						<ExpenseList />
-					</div>
-				</div>
-				<h3 className='mt-3'>Add Expense</h3>
-				<div className='row mt-3'>
-					<div className='col-sm'>
-						<AddExpenseForm />
-					</div>
-				</div>
-			</div>
+		<Menu />
+		<Switch>
+			<Route path="/Expenses">
+				<Expenses />
+			</Route>
+			<Route path="/CreateBudget">
+				<CreateBudget />
+			</Route>
+			<Route  path="/">
+				<Home monthlyBudget={monthlyBudget} setMonthlyBudget={setMonthlyBudget}/>
+			</Route>
+		</Switch>
 		</AppProvider>
+	  </div>
 	);
+
 };
 
 export default App;

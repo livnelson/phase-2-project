@@ -1,28 +1,18 @@
-import React, {useContext, Component} from 'react';
+import React, { useContext } from 'react';
 import { AppContext } from './AppContext';
-import { TiEdit } from 'react-icons/ti'
 
 
-
-
-
-
-const Budget = () => {
+const Budget = ({monthlyBudget}) => {
     
-    const {budget} = useContext(AppContext)
-    
-    
+    const { budget } = useContext(AppContext)
+
     return (
         <div  className='alert alert-secondary'>
-            <span>Budget: $10,000</span>
-            <spacer> </spacer>
-            
-            <TiEdit size='1.2em'></TiEdit>
+            <span>Budget: ${monthlyBudget}</span>
+            {/* <TiEdit size='1.2em' style={{ margin: 5 }} onClick={editBudget}></TiEdit> */}
         </div>
         
     )
 }
 
 export default Budget;
-
-//display initial state and make it editable
