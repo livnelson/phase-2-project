@@ -10,7 +10,7 @@ import "./global.css"
 import Menu from "./Menu"
 
 const App = () => {
-	
+	const [incomeAmount, setIncomeAmount] = useState([])
 	const [monthlyBudget, setMonthlyBudget] = useState("10000")
 	const [money, setMoney] = useState([])
 
@@ -22,6 +22,8 @@ const App = () => {
 			setMoney(budgetData)
 		})
 	},[])
+
+	
 
 	return (
 	  <div>
@@ -35,7 +37,12 @@ const App = () => {
 				<CreateBudget />
 			</Route>
 			<Route  path="/">
-				<Home monthlyBudget={monthlyBudget} setMonthlyBudget={setMonthlyBudget}/>
+				<Home 
+				incomeAmount={incomeAmount}
+				setIncomeAmount={setIncomeAmount}
+				monthlyBudget={monthlyBudget} 
+				setMonthlyBudget={setMonthlyBudget}
+				/>
 			</Route>
 		</Switch>
 		</AppProvider>

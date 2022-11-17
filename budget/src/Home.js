@@ -3,7 +3,7 @@ import Budget from "./Budget";
 import Remaining from "./Remaining";
 import ExpenseTotal from "./ExpenseTotal";
 
-function Home({ monthlyBudget, setMonthlyBudget }) {
+function Home({ monthlyBudget, setMonthlyBudget, incomeAmount, setIncomeAmount}) {
   return (
     <div className="container">
       <div id="app-intro">
@@ -30,6 +30,8 @@ function Home({ monthlyBudget, setMonthlyBudget }) {
               <Remaining
                 monthlyBudget={monthlyBudget}
                 setMonthlyBudget={setMonthlyBudget}
+                incomeAmount={incomeAmount}
+                setIncomeAmount={setIncomeAmount}
               />
             </div>
           </div>
@@ -40,4 +42,4 @@ function Home({ monthlyBudget, setMonthlyBudget }) {
 }
 
 export default Home;
-git add . 
+ 

@@ -2,10 +2,9 @@ import React, {useEffect, useState} from 'react'
 import AddExpenseForm from './AddExpenseForm'
 import BudgetForm from './BudgetForm'
 
-function CreateBudget({monthlyBudget, setMonthlyBudget}) {
+function CreateBudget({monthlyBudget, setMonthlyBudget, incomeAmount, setIncomeAmount}) {
   
-  const [incomeAmount, setIncomeAmount] = useState([])
-
+  
 
   return (
     <div className="container">
@@ -17,6 +16,7 @@ function CreateBudget({monthlyBudget, setMonthlyBudget}) {
                 </div>
             </div>
     </div>
+    
   )
 }
 
