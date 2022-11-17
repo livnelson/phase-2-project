@@ -1,22 +1,50 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 
-const budgetForm = ({monthlyBudget, setMonthlyBudget}) => {
+const budgetForm = ({monthlyBudget, setMonthlyBudget, incomeAmount, setIncomeAmount}) => {
+  
+  
+  // const incomeArray = () => {
+  // useEffect(() => {
+  //   fetch('http://localhost:8000/income', {
+  //     method: 'PATCH',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify({
+  //       amount: incomeAmount.money
+  //     })
+  //   })
+      
+  //   .then((res) => res.json())
+  //   .then(incomeData => {
+  //     console.log(incomeData)
+  //     setIncomeAmount(incomeData)
+  //   })
+  // },[])}
+  //   const handleChange = (e) => {
+  //       console.log('hi', e.target.value)
+  //       setIncomeAmount(e.target.value)
+  //   }
+  //   const handleSubmit = (e) => {
+  //     e.preventDefault()
+  //     console.log('hi')
+  //   }
+//     return (
+//         <div id="budget-form" className="budget-form">
+//             <form onSubmit={handleSubmit}>
+//               <label>
+//                 Add Montly Income: $ 
+//                 <input 
+//                 type="number" 
+//                 style={{ margin: 5 }} 
+//                 required value={incomeAmount}
+//                 onChange={handleChange}
+//                 />
+//               </label>
+//               <button type="submit" value="Submit">Submit</button>
+//             </form>
+//        </div>
+//     )
+// }
 
-    const handleChange = (e) => {
-        console.log('hi', e.target.value)
-        setMonthlyBudget(e.target.value)
-    }
-    return (
-      <div id="budget-form" className="budget-form">
-        <label>
-          <h5>Add Montly Income: $ </h5>
-        </label>
-        <form>
-          <input type="number" style={{ margin: 5 }} required value={monthlyBudget} />
-          <input onSubmit={handleChange} type="submit" value="Submit" />
-        </form>
-      </div>
-    )
-}
-
-export default budgetForm
+// export default budgetForm

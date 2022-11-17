@@ -10,7 +10,7 @@ import "./global.css"
 import Menu from "./Menu"
 
 const App = () => {
-
+	
 	const [monthlyBudget, setMonthlyBudget] = useState("10000")
 	const [money, setMoney] = useState([])
 
