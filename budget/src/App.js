@@ -5,7 +5,6 @@ import Expenses from './Expenses';
 import CreateBudget from './CreateBudget';
 import { AppProvider } from "./AppContext.js"
 import { Switch, Route } from "react-router-dom"
-import BudgetForm from './BudgetForm'
 
 import "./global.css"
 import Menu from "./Menu"
@@ -13,15 +12,16 @@ import Menu from "./Menu"
 const App = () => {
 
 	const [monthlyBudget, setMonthlyBudget] = useState("10000")
-	// const [income, setIncome] = useState([])
+	const [money, setMoney] = useState([])
 
-	// useEffect(() => { 
-	// 	fetch('http://localhost:8000/expenses')
-	// 	.then((res) => res.json())
-	// 	.then(budgetData => {
-	// 		console.log(budgetData)
-	// 	})
-	// },[])
+	useEffect(() => { 
+		fetch('http://localhost:8000/budget')
+		.then((res) => res.json())
+		.then(budgetData => {
+			console.log(budgetData)
+			setMoney(budgetData)
+		})
+	},[])
 
 	return (
 	  <div>

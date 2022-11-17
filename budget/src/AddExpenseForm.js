@@ -30,6 +30,9 @@ const AddExpenseForm = ({ handleEdit }) => {
 	return (
 		<form id="expense-form" onSubmit={onSubmit}>
             {/* <h5 className='mt-3'>Add Expense</h5> */}
+			<label>
+                <h5>Add Expense</h5>
+              </label>
 			<div className='row'>
 				<div className='col-sm'>
 					{/* <label for='name'></label> */}
