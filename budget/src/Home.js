@@ -40,4 +40,3 @@ function Home({ monthlyBudget, setMonthlyBudget }) {
 }
 
 export default Home;
-git add . 
