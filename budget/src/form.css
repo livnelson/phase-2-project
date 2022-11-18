@@ -1,5 +1,5 @@
 #expense-form {
-    max-width: 600px;
+    max-width: 500px;
     display: block;
     padding-top: 20px;
     padding-left: 20px;
@@ -16,7 +16,7 @@
 }
 
 #budget-form {
-    max-width: 600px;
+    max-width: 500px;
     display: grid;
     padding-top: 20px;
     padding-left: 20px;
@@ -60,7 +60,7 @@
 }
 
 .form-control {
-    width: 535px;
+    width: 435px;
     display: grid;
     margin-top: 10px;
     padding-top: 10px;
