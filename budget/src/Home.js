@@ -3,7 +3,8 @@ import Budget from "./Budget";
 import Remaining from "./Remaining";
 import ExpenseTotal from "./ExpenseTotal";
 
-function Home({ monthlyBudget, setMonthlyBudget }) {
+function Home({ income, mappedIncome }) {
+
   return (
     <div className="container">
       <div id="app-intro">
@@ -19,18 +20,14 @@ function Home({ monthlyBudget, setMonthlyBudget }) {
           <div className="row mt-3">
             <div id="budget-col" className="col-sm">
               <Budget
-                monthlyBudget={monthlyBudget}
-                setMonthlyBudget={setMonthlyBudget}
+                mappedIncome={mappedIncome}
               />
             </div>
             <div id="expense-col" className="col-sm">
               <ExpenseTotal />
             </div>
             <div id="remaining-col" className="col-sm">
-              <Remaining
-                monthlyBudget={monthlyBudget}
-                setMonthlyBudget={setMonthlyBudget}
-              />
+              <Remaining mappedIncome={mappedIncome} />
             </div>
           </div>
         </div>
