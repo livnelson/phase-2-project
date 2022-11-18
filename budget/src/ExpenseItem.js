@@ -27,7 +27,7 @@ const ExpenseItem = (props) => {
     fetch(`http://localhost:8000/expenses/` + props.id, {
       method: "DELETE",
     }).then(() => {
-      // history.push('/')
+      history.push('/')
       setExpenses();
     });
     onDelete(id);
