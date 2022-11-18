@@ -8,14 +8,14 @@ const AddExpenseForm = ({ onSetExpenses }) => {
   const { dispatch } = useContext(AppContext);
   const history = useHistory()
 
-  const [name, setName] = useState("");
-  const [cost, setCost] = useState("");
-  const [newExpense, setNewExpense] = useState("");
+  const [name, setName] = useState([]);
+  const [cost, setCost] = useState([]);
+  // const [newExpense, setNewExpense] = useState("");
 
   const newList = { name, cost };
 
-  const onSubmit = (event) => {
-    event.preventDefault();
+  const onSubmit = (e) => {
+    e.preventDefault();
 
     const expense = {
       id: uuidv4(),
