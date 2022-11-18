@@ -3,12 +3,17 @@ import { AppContext } from './AppContext';
 import { v4 as uuidv4 } from 'uuid';
 import "./form.css"
 
-const AddExpenseForm = ({ handleEdit }) => {
+const AddExpenseForm = ({ onSetExpenses }) => {
 	const { dispatch } = useContext(AppContext);
-
 
 	const [name, setName] = useState('');
 	const [cost, setCost] = useState('');
+	const [newExpense, setNewExpense] = useState('');
+
+	const newList = { name, cost}
+
+		// console.log(newList)
+
 
 
 	const onSubmit = (event) => {
@@ -24,8 +29,23 @@ const AddExpenseForm = ({ handleEdit }) => {
 			type: 'ADD_EXPENSE',
 			payload: expense,
 		});
-	};
 
+		const configExpenses = {
+			method: "POST",
+			  headers: {
+				"Content-Type": "application/json",
+				"Accept": "application/json",
+			  },
+			  body: JSON.stringify(newList),
+		  }
+	
+		  fetch(`http://localhost:8000/expenses`, configExpenses)
+		  .then((res) => res.json())
+		  .then((data) => {
+			console.log(data)
+			// onSetExpenses(data)
+		  })
+	};
 
 	return (
 		<form id="expense-form" onSubmit={onSubmit}>
@@ -53,10 +73,10 @@ const AddExpenseForm = ({ handleEdit }) => {
 						id='cost'
                         placeholder="Cost"
 						required='required'
-						type='text'
+						type='number'
 						className='form-control'
 						value={cost}
-						onChange={(event) => setCost(event.target.value)}
+						onChange={(event) => setCost(event.target.valueAsNumber)}
 					></input>
 				</div>
                 <br />

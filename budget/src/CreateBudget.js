@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import AddExpenseForm from './AddExpenseForm'
 import BudgetForm from './BudgetForm'
 
-function CreateBudget({ income, mappedIncome, setIncome }) {
+function CreateBudget({ income, mappedIncome, setIncome, onSetExpenses }) {
 
   return (
     <div className="container">
@@ -13,7 +13,7 @@ function CreateBudget({ income, mappedIncome, setIncome }) {
                 income={income}
                 setIncome={setIncome}
               />
-              <AddExpenseForm />
+              <AddExpenseForm onSetExpenses={onSetExpenses}/>
           </div>
         </div>
     </div>

@@ -9,8 +9,6 @@ const BudgetForm = ({income, setIncome, mappedIncome}) => {
     console.log(newIncome)
   }
 
-
-  
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(e.target.value)

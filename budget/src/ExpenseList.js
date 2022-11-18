@@ -4,8 +4,8 @@ import { AppContext } from './AppContext';
 
 const ExpenseList = () => {
     // const {expenses} = useContext(AppContext)
-
     const [expenses, setExpenses] = useState([])
+
 	const expensesArray = useEffect(() =>
     {fetch('http://localhost:8000/expenses')
 			.then((res) => res.json())

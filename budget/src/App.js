@@ -11,7 +11,11 @@ import Menu from "./Menu";
 
 const App = () => {
   const [income, setIncome] = useState([]);
+  const [expenses, setExpenses] = useState([]);
 
+  	const onSetExpenses = (newExpense) => {
+		setExpenses([...expenses, newExpense])
+	}
 
   useEffect(() => {
     fetch("http://localhost:8000/income")
@@ -35,7 +39,7 @@ const App = () => {
             <Expenses />
           </Route>
           <Route path="/CreateBudget">
-            <CreateBudget income={income} setIncome={setIncome} mappedIncome={mappedIncome}/>
+            <CreateBudget income={income} setIncome={setIncome} mappedIncome={mappedIncome} onSetExpenses={onSetExpenses}/>
           </Route>
           <Route path="/">
             <Home income={income} setIncome={setIncome} mappedIncome={mappedIncome}/>
