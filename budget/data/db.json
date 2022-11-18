@@ -26,15 +26,15 @@
       "cost": 75
     },
     {
-      "id": 6,
       "name": "shopping",
-      "cost": 60
+      "cost": 60,
+      "id": 6
     }
   ],
   "income": [
     {
       "id": 1,
-      "money": 10000
+      "money": 8500
     }
   ]
 }

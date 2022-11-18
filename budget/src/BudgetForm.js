@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 const BudgetForm = ({income, setIncome, mappedIncome}) => {
   const [newIncome, setNewIncome] = useState(0)
+  const history = useHistory()
 
   const handleChange = (e) => {
     setNewIncome(e.target.valueAsNumber)
@@ -9,8 +11,6 @@ const BudgetForm = ({income, setIncome, mappedIncome}) => {
     console.log(newIncome)
   }
 
-
-  
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(e.target.value)
@@ -36,6 +36,7 @@ const BudgetForm = ({income, setIncome, mappedIncome}) => {
             return data
           } else return i
         })
+        history.push('/')
         setIncome(spreadIncome)
      
       })
